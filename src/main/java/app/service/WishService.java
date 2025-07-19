@@ -31,9 +31,13 @@ public class WishService {
         return wish;
     }
 
+    public Wish getWishById(UUID id) {
+        return wishRepository.findById(id).orElseThrow();
+    }
+
     public Wish editWish(UUID id, WishRequest wishRequest) {
 
-        Wish wish = wishRepository.findById(id).orElseThrow();
+        Wish wish = getWishById(id);
 
         wish.setDescription(wishRequest.getWish());
         wish.setUpdatedOn(LocalDateTime.now());
