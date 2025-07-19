@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/v1/wishes")
+@RequestMapping("/api/v1/wishes")
 public class WishController {
 
     @Autowired
