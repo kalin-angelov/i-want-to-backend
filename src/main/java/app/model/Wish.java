@@ -20,7 +20,7 @@ public class Wish {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false, length = 2000)
+    @Column(nullable = false, length = 1000)
     private String description;
 
     @Column(nullable = false)
